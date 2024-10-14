@@ -1,0 +1,25 @@
+services:
+  teppidb:
+    image: mcr.microsoft.com/azure-sql-edge:latest
+    container_name: teppidb
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=1StrongPassword@
+    ports:
+      - "8002:1433"
+    volumes:
+      - sqlserverdata:/var/opt/mysql
+    networks:
+      - teppinetwork
+  redis:
+    container_name: redis
+    image: redis
+    restart: always
+    ports:
+      - 6379:6379    
+
+networks:
+  teppinetwork:
+
+volumes:
+  sqlserverdata:

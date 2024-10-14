@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
+        <PackageReference Include="Aspire.Hosting.Redis" Version="8.0.1" />
+        <PackageReference Include="Aspire.StackExchange.Redis.DistributedCaching" Version="8.0.1" />
+        <PackageReference Include="Aspire.StackExchange.Redis.OutputCaching" Version="8.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.5"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.6" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
+        <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="9.0.0-preview.5.24306.11" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.6.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
+        <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.6.2" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.6.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Teppi.Application\Teppi.Application.csproj" />
+      <ProjectReference Include="..\Teppi.Data\Teppi.Data.csproj" />
+      <ProjectReference Include="..\Teppi.Share\Teppi.Share.csproj" />
+    </ItemGroup>
+
+</Project>
